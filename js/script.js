@@ -23,11 +23,22 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
-if (menuToggle && menu) {
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('active'); // abre ou fecha
+});
+
+// Scroll suave e fecha o menu ao clicar
+document.querySelectorAll('.menu a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const section = document.querySelector(this.getAttribute('href'));
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    menu.classList.remove('active'); // fecha o menu
   });
-}
+});
+
 
 
 /* ===============================

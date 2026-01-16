@@ -311,6 +311,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+   flex-wrap: wrap;
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 999;
@@ -443,17 +444,23 @@ a {
   }
 }
 
-/* Mobile pequeno */
-@media (max-width: 480px) {
+
+  @media (max-width: 480px) {
   .whatsapp-btn {
-    padding: 14px 20px;
-    font-size: 0.9rem;
-    border-radius: 28px;
+    padding: 12px 20px; /* aumenta o tamanho do botão */
+    font-size: 0.9rem;   /* aumenta o ícone e texto */
+    border-radius: 30px; /* mantém arredondado, mas não uma bolinha */
+  }
+   .whatsapp-btn span {
+    display: none; /* <- aqui está escondendo o texto */
   }
 
   .whatsapp-btn span {
-    display: inline;
-    font-size: 0.8rem;
+    display: inline;     /* mostra o texto */
+    font-size: 0.85rem;  /* ajusta o tamanho do texto */
   }
 }
+
+
+
 

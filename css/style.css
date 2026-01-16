@@ -428,3 +428,32 @@ a {
   .logo { font-size: 1rem; } /* nome completo visível em linha única */
   .header { padding: 14px 18px; }
 }
+
+/* Mobile médio e pequeno */
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    padding: 16px 24px;  /* aumenta o tamanho do botão */
+    font-size: 1rem;      /* aumenta o tamanho do ícone e texto */
+    border-radius: 30px;  /* mantém arredondado, mas não tão pequeno */
+  }
+
+  .whatsapp-btn span {
+    display: inline; /* mostra o texto novamente */
+    font-size: 0.9rem; 
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .whatsapp-btn {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    border-radius: 28px;
+  }
+
+  .whatsapp-btn span {
+    display: inline;
+    font-size: 0.8rem;
+  }
+}
+

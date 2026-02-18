@@ -302,20 +302,27 @@ a {
 ================================ */
 .whatsapp-btn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   background-color: #25d366;
   color: white;
   padding: 12px 20px;
-  border-radius: 50px;
+  border-radius: 30px; /* não é 50% para não virar bolinha */
   display: flex;
   align-items: center;
-  gap: 10px;
-   flex-wrap: wrap;
+  gap: 8px;
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 999;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  flex-wrap: wrap; /* quebra linha se precisar */
+  max-width: 90%; /* garante que não ultrapasse a tela */
+  white-space: nowrap; /* mantém o texto em linha se couber */
+}
+
+.whatsapp-btn span {
+  display: inline;
+  font-size: 0.9rem;
 }
 
 .whatsapp-btn:hover {
